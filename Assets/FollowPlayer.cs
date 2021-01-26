@@ -1,0 +1,21 @@
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
+
+public class FollowPlayer : MonoBehaviour
+{
+
+    public Transform player;
+    void Start() { 
+}
+
+    void Update()
+    {
+        if (player.position.y > transform.position.y)
+        {
+            transform.position = new Vector3(transform.position.x, player.position.y, transform.position.z);
+        }
+    }
+}
